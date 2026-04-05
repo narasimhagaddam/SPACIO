@@ -1,16 +1,50 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import CategoryGrid from "@/components/CategoryGrid";
+import TrendingSection from "@/components/TrendingSection";
+import { motion } from "framer-motion";
+import { Search } from "lucide-react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background pb-24">
+      {/* Search bar */}
+      <div className="px-4 py-3">
+        <div className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-secondary">
+          <Search className="w-4 h-4 text-muted-foreground" />
+          <span className="text-sm text-muted-foreground">Search spaces, games, venues...</span>
+        </div>
+      </div>
+
+      {/* Hero */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="px-4 py-2"
+      >
+        <h1 className="text-2xl font-bold text-foreground">
+          What's the plan today? 👀
+        </h1>
+        <p className="text-sm text-muted-foreground mt-1">Discover and book amazing spaces near you</p>
+      </motion.div>
+
+      {/* Categories */}
+      <CategoryGrid />
+
+      {/* Trending */}
+      <TrendingSection />
+
+      {/* Offers Banner */}
+      <div className="px-4 py-2">
+        <div className="gradient-accent rounded-2xl p-5 flex items-center justify-between">
+          <div>
+            <p className="font-bold text-accent-foreground">🎁 First Booking Free!</p>
+            <p className="text-accent-foreground/80 text-xs mt-1">Up to ₹200 off. Limited time only.</p>
+          </div>
+          <span className="text-3xl">🎉</span>
+        </div>
+      </div>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
