@@ -11,6 +11,8 @@ interface AppState {
   setShowLogin: (v: boolean) => void;
   selectedCategory: string | null;
   setSelectedCategory: (c: string | null) => void;
+  showSplash: boolean;
+  setShowSplash: (v: boolean) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -24,4 +26,6 @@ export const useAppStore = create<AppState>((set) => ({
   setShowLogin: (v) => set({ showLogin: v }),
   selectedCategory: null,
   setSelectedCategory: (c) => set({ selectedCategory: c }),
+  showSplash: true,
+  setShowSplash: (v) => set({ showSplash: v }),
 }));
