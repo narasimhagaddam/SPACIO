@@ -16,9 +16,13 @@ const SplashScreen = () => {
   const { showSplash, setShowSplash } = useAppStore();
 
   useEffect(() => {
+    // Auto-dismiss after 2.8s
     const timer = setTimeout(() => setShowSplash(false), 2800);
     return () => clearTimeout(timer);
   }, [setShowSplash]);
+
+  // Also dismiss on click/tap
+  const handleDismiss = () => setShowSplash(false);
 
   return (
     <AnimatePresence>
