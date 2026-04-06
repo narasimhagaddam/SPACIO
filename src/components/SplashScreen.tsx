@@ -13,15 +13,18 @@ const floatingIcons = [
 ];
 
 const SplashScreen = () => {
-  const { showSplash, setShowSplash } = useAppStore();
+  const { showSplash, setShowSplash, splashShown, setSplashShown } = useAppStore();
 
   useEffect(() => {
-    // Auto-dismiss after 2.8s
-    const timer = setTimeout(() => setShowSplash(false), 2800);
-    return () => clearTimeout(timer);
-  }, [setShowSplash]);
+    // Only show splash once per session
+    if (!splashShown) {
+      setSplashShown(true);
+      setShowSplash(true);
+      const timer = setTimeout(() => setShowSplash(false), 2800);
+      return () => clearTimeout(timer);
+    }
+  }, [splashShown, setSplashShown, setShowSplash]);
 
-  // Also dismiss on click/tap
   const handleDismiss = () => setShowSplash(false);
 
   return (
@@ -135,6 +138,16 @@ const SplashScreen = () => {
               />
             ))}
           </motion.div>
+
+          {/* Tap to skip */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ delay: 1.5 }}
+            className="relative z-10 mt-6 text-[10px] text-muted-foreground"
+          >
+            Tap anywhere to skip
+          </motion.p>
         </motion.div>
       )}
     </AnimatePresence>
