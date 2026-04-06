@@ -28,9 +28,10 @@ const SplashScreen = () => {
     <AnimatePresence>
       {showSplash && (
         <motion.div
+          onClick={handleDismiss}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="fixed inset-0 z-[200] flex flex-col items-center justify-center overflow-hidden"
+          className="fixed inset-0 z-[200] flex flex-col items-center justify-center overflow-hidden cursor-pointer"
           style={{
             background: "linear-gradient(160deg, hsl(240 20% 4%) 0%, hsl(258 40% 12%) 40%, hsl(210 50% 8%) 100%)",
           }}
