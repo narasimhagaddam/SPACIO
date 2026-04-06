@@ -17,15 +17,16 @@ const CategoryPage = () => {
       {/* Hero */}
       <div className="relative h-48">
         <img src={category.image} alt={category.label} className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-        <button
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+        <motion.button
+          whileTap={{ scale: 0.9 }}
           onClick={() => navigate(-1)}
-          className="absolute top-4 left-4 p-2 rounded-full glass"
+          className="absolute top-4 left-4 p-2.5 rounded-xl glass"
         >
           <ArrowLeft className="w-5 h-5 text-foreground" />
-        </button>
+        </motion.button>
         <div className="absolute bottom-4 left-4">
-          <h1 className="text-2xl font-bold text-foreground">
+          <h1 className="text-2xl font-extrabold text-foreground">
             {category.emoji} {category.label}
           </h1>
           <p className="text-sm text-muted-foreground">{filtered.length} spaces nearby</p>
@@ -34,11 +35,11 @@ const CategoryPage = () => {
 
       {/* Subcategory pills */}
       <div className="flex gap-2 px-4 py-3 overflow-x-auto no-scrollbar">
-        <span className="px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold whitespace-nowrap">
+        <span className="px-3.5 py-1.5 rounded-2xl gradient-primary text-primary-foreground text-xs font-bold whitespace-nowrap glow-primary">
           All
         </span>
         {[...new Set(filtered.map((s) => s.subcategory))].map((sub) => (
-          <span key={sub} className="px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-medium whitespace-nowrap">
+          <span key={sub} className="px-3.5 py-1.5 rounded-2xl glass-card text-foreground text-xs font-semibold whitespace-nowrap">
             {sub}
           </span>
         ))}
