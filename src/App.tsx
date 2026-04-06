@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
 import LoginModal from "@/components/LoginModal";
+import SplashScreen from "@/components/SplashScreen";
 import Index from "./pages/Index";
 import CategoryPage from "./pages/CategoryPage";
 import SpaceDetail from "./pages/SpaceDetail";
@@ -22,6 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SplashScreen />
         <div className="max-w-md mx-auto min-h-screen bg-background relative">
           <Header />
           <Routes>
