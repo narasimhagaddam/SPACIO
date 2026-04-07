@@ -19,13 +19,13 @@ export interface Category {
 }
 
 export const categories: Category[] = [
-  { key: "play", label: "Play", emoji: "🎮", tagline: "Game on 🔥", image: playImg, color: "play", gradient: "gradient-play" },
+  { key: "play", label: "Play", emoji: "🎮", tagline: "Game on or still scrolling? 😏", image: playImg, color: "play", gradient: "gradient-play" },
   { key: "wellness", label: "Wellness", emoji: "🧘", tagline: "Find your zen 🌿", image: wellnessImg, color: "wellness", gradient: "" },
-  { key: "work", label: "Work", emoji: "💻", tagline: "Focus mode 🎯", image: workImg, color: "work", gradient: "gradient-primary" },
-  { key: "party", label: "Party", emoji: "🎉", tagline: "Let's celebrate", image: partyImg, color: "party", gradient: "gradient-party" },
-  { key: "park", label: "Park", emoji: "🚗", tagline: "Spot found 📍", image: parkImg, color: "park", gradient: "gradient-accent" },
-  { key: "shop", label: "Shop", emoji: "🏬", tagline: "Browse around", image: shopImg, color: "shop", gradient: "" },
-  { key: "stay", label: "Stay", emoji: "🏨", tagline: "Rest easy 😴", image: stayImg, color: "stay", gradient: "" },
+  { key: "work", label: "Work", emoji: "💻", tagline: "Get things done ⚡", image: workImg, color: "work", gradient: "gradient-primary" },
+  { key: "party", label: "Party", emoji: "🎉", tagline: "Turn moments into memories 🎊", image: partyImg, color: "party", gradient: "gradient-party" },
+  { key: "park", label: "Park", emoji: "🚗", tagline: "Park smart, stress less 🚘", image: parkImg, color: "park", gradient: "gradient-accent" },
+  { key: "shop", label: "Shop", emoji: "🛍️", tagline: "Discover something new 🛒", image: shopImg, color: "shop", gradient: "" },
+  { key: "stay", label: "Stay", emoji: "🏨", tagline: "Your comfort zone 🛏️", image: stayImg, color: "stay", gradient: "" },
 ];
 
 export interface Space {
