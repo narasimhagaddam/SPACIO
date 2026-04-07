@@ -4,8 +4,9 @@ import partyImg from "@/assets/spaces/party.jpg";
 import stayImg from "@/assets/spaces/stay.jpg";
 import parkImg from "@/assets/spaces/park.jpg";
 import shopImg from "@/assets/spaces/shop.jpg";
+import wellnessImg from "@/assets/spaces/wellness.jpg";
 
-export type CategoryKey = "work" | "play" | "party" | "park" | "shop" | "stay";
+export type CategoryKey = "work" | "play" | "party" | "park" | "shop" | "stay" | "wellness";
 
 export interface Category {
   key: CategoryKey;
@@ -19,6 +20,7 @@ export interface Category {
 
 export const categories: Category[] = [
   { key: "play", label: "Play", emoji: "🎮", tagline: "Game on 🔥", image: playImg, color: "play", gradient: "gradient-play" },
+  { key: "wellness", label: "Wellness", emoji: "🧘", tagline: "Find your zen 🌿", image: wellnessImg, color: "wellness", gradient: "" },
   { key: "work", label: "Work", emoji: "💻", tagline: "Focus mode 🎯", image: workImg, color: "work", gradient: "gradient-primary" },
   { key: "party", label: "Party", emoji: "🎉", tagline: "Let's celebrate", image: partyImg, color: "party", gradient: "gradient-party" },
   { key: "park", label: "Park", emoji: "🚗", tagline: "Spot found 📍", image: parkImg, color: "park", gradient: "gradient-accent" },
