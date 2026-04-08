@@ -12,6 +12,8 @@ import CategoryPage from "./pages/CategoryPage";
 import SpaceDetail from "./pages/SpaceDetail";
 import HostDashboard from "./pages/HostDashboard";
 import AddSpace from "./pages/AddSpace";
+import SearchPage from "./pages/SearchPage";
+import SavedPage from "./pages/SavedPage";
 import ProfilePage from "./pages/ProfilePage";
 import NotificationsPage from "./pages/NotificationsPage";
 import NotFound from "./pages/NotFound";
@@ -30,6 +32,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/category/:key" element={<CategoryPage />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/saved" element={<SavedPage />} />
             <Route path="/space/:id" element={<SpaceDetail />} />
             <Route path="/host" element={<HostDashboard />} />
             <Route path="/host/add" element={<AddSpace />} />
