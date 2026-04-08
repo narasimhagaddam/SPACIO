@@ -13,6 +13,7 @@ import SpaceDetail from "./pages/SpaceDetail";
 import HostDashboard from "./pages/HostDashboard";
 import AddSpace from "./pages/AddSpace";
 import ProfilePage from "./pages/ProfilePage";
+import NotificationsPage from "./pages/NotificationsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/space/:id" element={<SpaceDetail />} />
             <Route path="/host" element={<HostDashboard />} />
             <Route path="/host/add" element={<AddSpace />} />
+            <Route path="/notifications" element={<NotificationsPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

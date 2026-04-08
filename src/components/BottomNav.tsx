@@ -1,4 +1,4 @@
-import { Home, Search, Heart, User, Plus, LayoutDashboard } from "lucide-react";
+import { Home, Search, Bell, User, Plus, LayoutDashboard } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -11,7 +11,7 @@ const BottomNav = () => {
   const exploreTabs = [
     { icon: Home, label: "Home", path: "/" },
     { icon: Search, label: "Search", path: "/search" },
-    { icon: Heart, label: "Saved", path: "/saved" },
+    { icon: Bell, label: "Alerts", path: "/notifications" },
     { icon: User, label: "Profile", path: "/profile" },
   ];
 
